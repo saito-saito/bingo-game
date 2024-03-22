@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ビンゴゲーム</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="select-area">
+        <div id="btn-area">
+            <button id="select-card">ビンゴカード</button>
+            <button id="select-machine">抽選機</button>
+        </div>
+    </div>
+
+    <div class="bingo-card-area hide">
+        <div id="bingo-card"> 
+            <div class="card-title"><div class="char">B</div><div class="char">I</div><div class="char">N</div><div class="char">G</div><div class="char">O</div></div>
+            <div class="card-main">
+            <div class="b-1 num"></div><div class="i-1 num"></div><div class="n-1 num"></div><div class="g-1 num"></div><div class="o-1 num"></div>
+            <div class="b-2 num"></div><div class="i-2 num"></div><div class="n-2 num"></div><div class="g-2 num"></div><div class="o-2 num"></div>
+            <div class="b-3 num"></div><div class="i-3 num"></div><div class="num free">FREE</div><div class="g-3 num"></div><div class="o-3 num"></div>
+            <div class="b-4 num"></div><div class="i-4 num"></div><div class="n-4 num"></div><div class="g-4 num"></div><div class="o-4 num"></div>
+            <div class="b-5 num"></div><div class="i-5 num"></div><div class="n-5 num"></div><div class="g-5 num"></div><div class="o-5 num"></div>
+            </div>
+            <div class="date"></div>
+        </div>
+
+        <div id="btn-area">
+            <button id="create">生成</button>
+            <button id="decide">決定</button>
+        </div>
+    </div>
+
+    <div class="machine-area hide">
+        <div id="btn-area">
+            <button id="select" class="machine-btn">抽選</button>
+            <div class="now-num"></div>
+          </div>
+        
+          <div id="selected-number">
+            <div id="b-area-1" class="num-area">
+              <div class="number 1">1</div>
+              <div class="number 2">2</div>
+              <div class="number 3">3</div>
+              <div class="number 4">4</div>
+              <div class="number 5">5</div>
+              <div class="number 6">6</div>
+              <div class="number 7">7</div>
+              <div class="number 8">8</div>
+            </div>
+            <div id="b-area-2" class="num-area">
+              <div class="number 9">9</div>
+              <div class="number 10">10</div>
+              <div class="number 11">11</div>
+              <div class="number 12">12</div>
+              <div class="number 13">13</div>
+              <div class="number 14">14</div>
+              <div class="number 15">15</div>
+            </div>
+            <div id="i-area-1" class="num-area">
+              <div class="number 16">16</div>
+              <div class="number 17">17</div>
+              <div class="number 18">18</div>
+              <div class="number 19">19</div>
+              <div class="number 20">20</div>
+              <div class="number 21">21</div>
+              <div class="number 22">22</div>
+              <div class="number 23">23</div>
+            </div>
+            <div id="i-area-2" class="num-area">
+              <div class="number 24">24</div>
+              <div class="number 25">25</div>
+              <div class="number 26">26</div>
+              <div class="number 27">27</div>
+              <div class="number 28">28</div>
+              <div class="number 29">29</div>
+              <div class="number 30">30</div>
+            </div>
+            <div id="n-area-1" class="num-area">
+              <div class="number 31">31</div>
+              <div class="number 32">32</div>
+              <div class="number 33">33</div>
+              <div class="number 34">34</div>
+              <div class="number 35">35</div>
+              <div class="number 36">36</div>
+              <div class="number 37">37</div>
+              <div class="number 38">38</div>
+            </div>
+            <div id="n-area-2" class="num-area">
+              <div class="number 39">39</div>
+              <div class="number 40">40</div>
+              <div class="number 41">41</div>
+              <div class="number 42">42</div>
+              <div class="number 43">43</div>
+              <div class="number 44">44</div>
+              <div class="number 45">45</div>
+            </div>
+            <div id="g-area-1" class="num-area">
+              <div class="number 46">46</div>
+              <div class="number 47">47</div>
+              <div class="number 48">48</div>
+              <div class="number 49">49</div>
+              <div class="number 50">50</div>
+              <div class="number 51">51</div>
+              <div class="number 52">52</div>
+              <div class="number 53">53</div>
+            </div>
+            <div id="g-area-2" class="num-area">
+              <div class="number 54">54</div>
+              <div class="number 55">55</div>
+              <div class="number 56">56</div>
+              <div class="number 57">57</div>
+              <div class="number 58">58</div>
+              <div class="number 59">59</div>
+              <div class="number 60">60</div>
+            </div>
+            <div id="o-area-1" class="num-area">
+              <div class="number 61">61</div>
+              <div class="number 62">62</div>
+              <div class="number 63">63</div>
+              <div class="number 64">64</div>
+              <div class="number 65">65</div>
+              <div class="number 66">66</div>
+              <div class="number 67">67</div>
+              <div class="number 68">68</div>
+            </div>
+            <div id="o-area-2" class="num-area">
+              <div class="number 69">69</div>
+              <div class="number 70">70</div>
+              <div class="number 71">71</div>
+              <div class="number 72">72</div>
+              <div class="number 73">73</div>
+              <div class="number 74">74</div>
+              <div class="number 75">75</div>
+            </div>
+            
+            
+          </div>
+    </div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
